@@ -14,7 +14,7 @@ public class Player {
 
     public Player() {
         for (int i = 0; i < gamePieceArray.length; i++) {
-            gamePieceArray[i] = new GamePiece();
+            gamePieceArray[i] = new GamePiece(color);
         }
     }
 
