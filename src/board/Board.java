@@ -56,9 +56,35 @@ public class Board extends JPanel {
         setLayout(new GridLayout(3, 3));
 
         add(new Home(Color.BLUE));
+
+        JPanel topSection = new JPanel();
+        for (int i = 0; i < 3; i++) {
+
+            position = new Position(Color.BLUE);
+            topSection.add(position);
+
+        }
+        add(topSection);
         add(new Home(Color.BLUE));
-        
+
+        JPanel middleSection = new JPanel();
+        for (int i = 0; i < 11; i++) {
+
+            position = new Position(Color.BLUE);
+            middleSection.add(position);
+
+        }
+        add(middleSection);
         add(new Home(Color.BLUE));
+
+        JPanel bottomSection = new JPanel();
+        for (int i = 0; i < 3; i++) {
+
+            position = new Position(Color.BLUE);
+            bottomSection.add(position);
+
+        }
+        add(bottomSection);
         add(new Home(Color.BLUE));
         
     }
