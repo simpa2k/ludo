@@ -54,7 +54,8 @@ public class Board extends JPanel {
     private JPanel constructPositionPanel(int width, int height) {
 
         JPanel panel = new JPanel();
-        panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
+        //panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
+        panel.setLayout(new GridLayout(height, width));
 
         for (int y = 0; y < height; y++) {
 
@@ -100,6 +101,13 @@ public class Board extends JPanel {
         add(bottomSection);
 
         add(new Home(Color.BLUE));
+        
+    }
+
+    private void constructNullLayoutBoard() {
+
+        setLayout(null);
+        System.out.println(getSize());
         
     }
 
