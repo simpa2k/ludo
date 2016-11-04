@@ -11,18 +11,12 @@ public class Board extends JPanel {
 
     private static final long serialVersionUID = 1L;
 
-    private static final int HEIGHT = 11;
-    private int width = 3;
     private ArrayList<Player> players = new ArrayList<>();
-
     private Position position = new Position(Color.WHITE);
 
-    public Board(){
-
+    public Board() {
         constructBoard();
-
     }
-
 
     private void addPositions(int width, int height, int x, int y, Color color) {
 
@@ -71,7 +65,6 @@ public class Board extends JPanel {
         addHome(new Home(Color.YELLOW), 0, 7);
         addPositions(3, 4, 4, 7, Color.BLUE);
         addHome(new Home(Color.GREEN), 8, 7);
-
 
     }
 
