@@ -9,6 +9,8 @@ import java.awt.*;
 
 public class Place extends JComponent {
 
+    private static final long serialVersionUID = 1L;
+
     private Color color;
 
     public Place(Color color) {

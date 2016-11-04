@@ -10,6 +10,8 @@ import java.awt.*;
 
 public class GamePlan extends JFrame {
 
+    private static final long serialVersionUID = 1L;
+
     private Place place = new Place(Color.WHITE);
     private JPanel mainPanel = new JPanel();
 
