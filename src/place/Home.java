@@ -1,6 +1,7 @@
 package place;
 
 import java.awt.Color;
+import java.awt.Dimension;
 
 public class Home extends Place {
 
@@ -8,6 +9,10 @@ public class Home extends Place {
 
     public Home(Color color) {
         super(color);
+
+        int diameter = getDiameter() * 2;
+        setPreferredSize(new Dimension(diameter, diameter));
+
     }
 
 }
