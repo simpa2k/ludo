@@ -6,6 +6,8 @@ import java.awt.*;
 
 public class GamePlan extends JPanel {
 
+    private static final long serialVersionUID = 1L;
+
     private Place place = new Place(Color.WHITE);
 
     public GamePlan(){
