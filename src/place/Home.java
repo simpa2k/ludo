@@ -15,4 +15,7 @@ public class Home extends Place {
 
     }
 
+    public void setGamePiece(){
+    }
+
 }
