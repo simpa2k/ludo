@@ -5,7 +5,7 @@ import java.awt.*;
 
 import gamePiece.GamePiece;
 
-public class Place extends JComponent {
+public abstract class Place extends JComponent {
 
     private static final long serialVersionUID = 1L;
 
@@ -33,4 +33,9 @@ public class Place extends JComponent {
     protected int getDiameter() {
         return diameter;
     }
+
+    public abstract void setGamePiece();
+
+
+
 }
