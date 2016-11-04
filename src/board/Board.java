@@ -1,10 +1,10 @@
-package gamePlan;
+package board;
 
 import place.Place;
 import javax.swing.*;
 import java.awt.*;
 
-public class GamePlan extends JPanel {
+public class Board extends JPanel {
 
     private static final long serialVersionUID = 1L;
 
@@ -13,7 +13,7 @@ public class GamePlan extends JPanel {
 
     private Place place = new Place(Color.WHITE);
 
-    public GamePlan(){
+    public Board(){
 
         setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
 
