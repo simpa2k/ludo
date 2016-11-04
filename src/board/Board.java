@@ -15,7 +15,7 @@ public class Board extends JPanel {
     private int width = 3;
     private ArrayList<Player> players = new ArrayList<>();
 
-    private Place place = new Place(Color.WHITE);
+    private Position position = new Position(Color.WHITE);
 
     public Board(){
 
@@ -41,8 +41,8 @@ public class Board extends JPanel {
             
             for (int x = 0; x < width; x++) {
 
-                place = new Place(Color.BLUE);
-                row.add(place);
+                position = new Position(Color.BLUE);
+                row.add(position);
 
             }
 

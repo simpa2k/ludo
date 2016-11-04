@@ -1,16 +1,14 @@
-package place; 
+package place;
 
 import javax.swing.*;
 import java.awt.*;
-
-import gamePiece.GamePiece;
 
 public abstract class Place extends JComponent {
 
     private static final long serialVersionUID = 1L;
 
     private Color color;
-    private GamePiece gamePiece;
+
     private int diameter = 50;
 
     public Place(Color color) {
