@@ -11,6 +11,10 @@ public class Board extends JPanel {
 
     private static final long serialVersionUID = 1L;
 
+    private static final double WIDTH = 11;
+    private static int homeWidth = (int) Math.ceil(WIDTH / 3);
+    private static int crossWidth = (int) Math.floor(WIDTH / 3);
+
     private ArrayList<Player> players = new ArrayList<>();
     private Position position = new Position(Color.WHITE);
     private Color[] colors = {Color.blue, Color.RED, Color.YELLOW, Color.GREEN};
@@ -47,8 +51,8 @@ public class Board extends JPanel {
         c.gridx = x;
         c.gridy = y;
 
-        c.gridwidth = 4;
-        c.gridheight = 4;
+        c.gridwidth = homeWidth;
+        c.gridheight = homeWidth;
 
         add(home, c);
 
@@ -59,14 +63,14 @@ public class Board extends JPanel {
         setLayout(new GridBagLayout());
 
         addHome(new Home(Color.BLUE), 0, 0);
-        addPositions(3, 4, 4, 0);
-        addHome(new Home(Color.RED), 8, 0);
+        addPositions(crossWidth, 4, homeWidth, 0);
+        addHome(new Home(Color.RED), crossWidth + homeWidth + 1, 0);
 
-        addPositions(11, 3, 0, 4);
+        addPositions((int) WIDTH, 3, 0, 4);
 
         addHome(new Home(Color.YELLOW), 0, 7);
-        addPositions(3, 4, 4, 7);
-        addHome(new Home(Color.GREEN), 8, 7);
+        addPositions(crossWidth, 4, homeWidth, 7);
+        addHome(new Home(Color.GREEN), crossWidth + homeWidth + 1, 7);
 
     }
 
