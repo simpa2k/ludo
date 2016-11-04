@@ -14,7 +14,7 @@ public class Home extends Place {
         setPreferredSize(new Dimension(diameter, diameter));
 
     }
-
+    @Override
     public void setGamePiece(){
     }
 

@@ -1,5 +1,7 @@
 package place;
 
+import gamePiece.GamePiece;
+import place.*;
 import java.awt.*;
 
 /**
@@ -7,6 +9,9 @@ import java.awt.*;
  */
 public class Position extends Place {
 
+    private static final long serialVersionUID = 1L;
+
+    private GamePiece gamePiece;
 
     public Position(Color color) {
         super(color);
