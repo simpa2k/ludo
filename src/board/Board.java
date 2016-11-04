@@ -19,96 +19,60 @@ public class Board extends JPanel {
 
     public Board(){
 
-        constructGridBoard();
-        //constructBoard();
+        constructBoard();
+
+    }
+
+
+    private void addPositions(int width, int height, int x, int y, Color color) {
+
+        for (int row = y; row < y + height; row++) {
+            
+            for (int column = x; column < x + width; column++) {
+
+                GridBagConstraints c = new GridBagConstraints();
+
+                c.gridx = column;
+                c.gridy = row;
+
+                Position position = new Position(color);
+                add(position, c);
+
+            }
+
+        }
+        
+    }
+
+    private void addHome(Home home, int x, int y) {
+
+        GridBagConstraints c = new GridBagConstraints();
+
+        c.gridx = x;
+        c.gridy = y;
+
+        c.gridwidth = 4;
+        c.gridheight = 4;
+
+        add(home, c);
+
     }
 
     private void constructBoard() {
-
-        setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
-
-        for (int y = 0; y < HEIGHT; y++) {
-
-            JPanel row = new JPanel(); 
-
-            boolean longRow = y > 3 && y < 7;
-
-            if(longRow && width != 11) {
-                width = 11;
-            } else if(!longRow && width != 3) {
-                width = 3;
-            }
-            
-            for (int x = 0; x < width; x++) {
-
-                position = new Position(Color.BLUE);
-                row.add(position);
-
-            }
-
-            this.add(row);
-
-        }
-    }
-
-    private JPanel constructPositionPanel(int width, int height) {
-
-        JPanel panel = new JPanel();
-        //panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
-        panel.setLayout(new GridLayout(height, width));
-
-        for (int y = 0; y < height; y++) {
-
-            JPanel row = new JPanel();
-
-            for(int x = 0; x < width; x++) {
-
-                position = new Position(Color.BLUE);
-                row.add(position);
-
-            }
-            panel.add(row);
-
-        }
-
-        return panel;
         
-    }
+        setLayout(new GridBagLayout());
 
-    private void constructGridBoard() {
-    
-        setLayout(new GridLayout(3, 3));
+        addHome(new Home(Color.BLUE), 0, 0);
+        addPositions(3, 4, 4, 0, Color.BLUE);
+        addHome(new Home(Color.RED), 8, 0);
 
-        add(new Home(Color.BLUE));
+        addPositions(11, 3, 0, 4, Color.BLUE);
 
-        JPanel topSection = constructPositionPanel(3, 4);
-        add(topSection);
+        addHome(new Home(Color.YELLOW), 0, 7);
+        addPositions(3, 4, 4, 7, Color.BLUE);
+        addHome(new Home(Color.GREEN), 8, 7);
 
-        add(new Home(Color.BLUE));
 
-        JPanel middleLeftSection = constructPositionPanel(4, 3);
-        add(middleLeftSection);
-
-        JPanel middleCenterSection = constructPositionPanel(3, 3);
-        add(middleCenterSection);
-
-        JPanel middleRightSection = constructPositionPanel(4, 3);
-        add(middleRightSection);
-
-        add(new Home(Color.BLUE));
-
-        JPanel bottomSection = constructPositionPanel(3, 4);
-        add(bottomSection);
-
-        add(new Home(Color.BLUE));
-        
-    }
-
-    private void constructNullLayoutBoard() {
-
-        setLayout(null);
-        System.out.println(getSize());
-        
     }
 
 }
