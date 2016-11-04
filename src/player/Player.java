@@ -2,11 +2,14 @@ package player;
 
 import gamePiece.GamePiece;
 
+import java.awt.*;
+
 /**
  * Created by Robert on 2016-11-04.
  */
 public class Player {
 
+    private Color color;
     GamePiece[] gamePieceArray = new GamePiece[4];
 
     public Player() {
@@ -14,5 +17,7 @@ public class Player {
             gamePieceArray[i] = new GamePiece();
         }
     }
+
+
 
 }
