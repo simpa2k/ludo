@@ -19,7 +19,7 @@ public class Board extends JPanel {
         constructBoard();
     }
 
-    private void addPositions(int width, int height, int x, int y, Color color) {
+    private void addPositions(int width, int height, int x, int y) {
 
         for (int row = y; row < y + height; row++) {
             
@@ -59,13 +59,13 @@ public class Board extends JPanel {
         setLayout(new GridBagLayout());
 
         addHome(new Home(Color.BLUE), 0, 0);
-        addPositions(3, 4, 4, 0, Color.BLUE);
+        addPositions(3, 4, 4, 0);
         addHome(new Home(Color.RED), 8, 0);
 
-        addPositions(11, 3, 0, 4, Color.BLUE);
+        addPositions(11, 3, 0, 4);
 
         addHome(new Home(Color.YELLOW), 0, 7);
-        addPositions(3, 4, 4, 7, Color.BLUE);
+        addPositions(3, 4, 4, 7);
         addHome(new Home(Color.GREEN), 8, 7);
 
     }
