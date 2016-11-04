@@ -51,40 +51,54 @@ public class Board extends JPanel {
         }
     }
 
+    private JPanel constructPositionPanel(int width, int height) {
+
+        JPanel panel = new JPanel();
+        panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
+
+        for (int y = 0; y < height; y++) {
+
+            JPanel row = new JPanel();
+
+            for(int x = 0; x < width; x++) {
+
+                position = new Position(Color.BLUE);
+                row.add(position);
+
+            }
+            panel.add(row);
+
+        }
+
+        return panel;
+        
+    }
+
     private void constructGridBoard() {
     
         setLayout(new GridLayout(3, 3));
 
         add(new Home(Color.BLUE));
 
-        JPanel topSection = new JPanel();
-        for (int i = 0; i < 3; i++) {
-
-            position = new Position(Color.BLUE);
-            topSection.add(position);
-
-        }
+        JPanel topSection = constructPositionPanel(3, 4);
         add(topSection);
+
         add(new Home(Color.BLUE));
 
-        JPanel middleSection = new JPanel();
-        for (int i = 0; i < 11; i++) {
+        JPanel middleLeftSection = constructPositionPanel(4, 3);
+        add(middleLeftSection);
 
-            position = new Position(Color.BLUE);
-            middleSection.add(position);
+        JPanel middleCenterSection = constructPositionPanel(3, 3);
+        add(middleCenterSection);
 
-        }
-        add(middleSection);
+        JPanel middleRightSection = constructPositionPanel(4, 3);
+        add(middleRightSection);
+
         add(new Home(Color.BLUE));
 
-        JPanel bottomSection = new JPanel();
-        for (int i = 0; i < 3; i++) {
-
-            position = new Position(Color.BLUE);
-            bottomSection.add(position);
-
-        }
+        JPanel bottomSection = constructPositionPanel(3, 4);
         add(bottomSection);
+
         add(new Home(Color.BLUE));
         
     }
