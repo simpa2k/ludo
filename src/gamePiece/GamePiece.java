@@ -9,8 +9,8 @@ public class GamePiece extends JComponent {
 
     private Color color;
 
-    public GamePiece() {
-
+    public GamePiece(Color color) {
+        this.color = color;
     }
 
 }

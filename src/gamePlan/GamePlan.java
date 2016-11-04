@@ -21,9 +21,11 @@ public class GamePlan extends JPanel {
 
             JPanel row = new JPanel(); 
 
-            if(y > 3 && y < 7) {
+            boolean longRow = y > 3 && y < 7;
+
+            if(longRow && width != 11) {
                 width = 11;
-            } else if(width != 3) {
+            } else if(!longRow && width != 3) {
                 width = 3;
             }
             
