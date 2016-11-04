@@ -1,4 +1,6 @@
-package place; /**
+package place; 
+
+/**
  * Created by Maja on 2016-11-01.
  */
 
