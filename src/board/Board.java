@@ -19,8 +19,8 @@ public class Board extends JPanel {
 
     public Board(){
 
-        //constructGridBagBoard();
-        constructBoard();
+        constructGridBoard();
+        //constructBoard();
     }
 
     private void constructBoard() {
@@ -51,40 +51,15 @@ public class Board extends JPanel {
         }
     }
 
-    private void constructGridBagBoard() {
+    private void constructGridBoard() {
+    
+        setLayout(new GridLayout(3, 3));
 
-        players.add(new Player());
-        players.add(new Player());
-        players.add(new Player());
-        players.add(new Player());
-
-        setLayout(new GridBagLayout());
+        add(new Home(Color.BLUE));
+        add(new Home(Color.BLUE));
         
-        /*for (int y = 0; y < players.size() / 2; y++) {
-
-            for (int x = 0; x < players.size() / 2; x++) {
-
-                GridBagConstraints c = new GridBagConstraints();
-
-                c.weightx = 1.0;
-                c.weighty = 1.0;
-
-                c.gridy = y;
-                c.gridx = x;
-
-                c.gridheight = 4;
-                c.gridwidth = 4;
-                c.fill = GridBagConstraints.BOTH;
-                c.ipady = 40;
-
-                Home home = new Home(Color.BLUE);
-
-                System.out.println(x + ", " + y);
-
-                this.add(home);
-            }
-            
-        }*/
+        add(new Home(Color.BLUE));
+        add(new Home(Color.BLUE));
         
     }
 

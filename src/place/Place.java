@@ -22,7 +22,8 @@ public class Place extends JComponent {
 
     public void paintComponent(Graphics g){
         g.setColor(color);
-        g.fillOval(10,10,40,40);
+        //g.fillOval(10,10,40,40);
+        g.fillOval(0,0,diameter,diameter);
     }
 
     protected void setDiameter(int diameter) {
