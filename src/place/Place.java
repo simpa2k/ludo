@@ -3,11 +3,14 @@ package place;
 import javax.swing.*;
 import java.awt.*;
 
+import gamePiece.GamePiece;
+
 public class Place extends JComponent {
 
     private static final long serialVersionUID = 1L;
 
     private Color color;
+    private GamePiece gamePiece;
 
     public Place(Color color) {
         this.color = color;
