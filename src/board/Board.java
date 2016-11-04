@@ -13,6 +13,7 @@ public class Board extends JPanel {
 
     private ArrayList<Player> players = new ArrayList<>();
     private Position position = new Position(Color.WHITE);
+    private Color[] colors = {Color.blue, Color.RED, Color.YELLOW, Color.GREEN};
 
     public Board() {
         constructBoard();
@@ -29,7 +30,8 @@ public class Board extends JPanel {
                 c.gridx = column;
                 c.gridy = row;
 
-                Position position = new Position(color);
+                Color positionColor = colors[( column + row ) % colors.length];
+                Position position = new Position(positionColor);
                 add(position, c);
 
             }
