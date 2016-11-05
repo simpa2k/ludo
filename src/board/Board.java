@@ -32,8 +32,9 @@ public class Board extends JPanel {
         
         double moduloThree = WIDTH % 3.0;
         double nearestNumberDivisibleByThree = WIDTH - moduloThree;
+        double moduloDividedByTwo = moduloThree / 2.0;
 
-        return (int) ( ( nearestNumberDivisibleByThree / 3.0 ) + Math.ceil(moduloThree / 2.0) );
+        return (int) ( ( nearestNumberDivisibleByThree / 3.0 ) + Math.ceil(moduloDividedByTwo) );
 
     }
 
