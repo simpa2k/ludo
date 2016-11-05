@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class Board extends JPanel {
 
     private static final long serialVersionUID = 1L;
-    private static final double WIDTH = 11;
+    private static final double WIDTH = 11.0;
 
     private static int homeWidth;
     private static int crossWidth;
@@ -50,6 +50,7 @@ public class Board extends JPanel {
 
                 Color positionColor = colors[( column + row ) % colors.length];
                 Position position = new Position(positionColor);
+
                 add(position, c);
 
             }
