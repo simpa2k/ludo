@@ -10,17 +10,31 @@ import java.util.ArrayList;
 public class Board extends JPanel {
 
     private static final long serialVersionUID = 1L;
-
     private static final double WIDTH = 11;
-    private static int homeWidth = (int) Math.ceil(WIDTH / 3);
-    private static int crossWidth = (int) Math.floor(WIDTH / 3);
+
+    private static int homeWidth;
+    private static int crossWidth;
 
     private ArrayList<Player> players = new ArrayList<>();
     private Position position = new Position(Color.WHITE);
     private Color[] colors = {Color.blue, Color.RED, Color.YELLOW, Color.GREEN};
 
     public Board() {
+
+        homeWidth = calculateHomeWidth();
+        crossWidth = (int) WIDTH - (homeWidth * 2);
+
         constructBoard();
+
+    }
+
+    private int calculateHomeWidth() {
+        
+        double moduloThree = WIDTH % 3.0;
+        double nearestNumberDivisbleByThree = WIDTH - moduloThree;
+
+        return (int) ( ( nearestNumberDivisbleByThree / 3.0 ) + Math.ceil(moduloThree / 2.0) );
+
     }
 
     private void addPositions(int width, int height, int x, int y) {
