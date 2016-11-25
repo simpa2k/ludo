@@ -10,10 +10,9 @@ public class Die {
 
     Random rnd = new Random();
     int die;
-//    boolean reThrow;
 
     public void throwDie() {
-//        reThrow = false;
+
         if (die == 6) {
             die = rnd.nextInt(6) +1;
             System.out.println(die);
@@ -22,6 +21,10 @@ public class Die {
             die = rnd.nextInt(6) +1;
             System.out.println(die);
         }
+    }
+
+    public int getDie() {
+        return die;
     }
 }
 
