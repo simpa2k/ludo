@@ -16,7 +16,6 @@ public class Board extends JPanel {
     private static int crossWidth;
 
     private ArrayList<Player> players = new ArrayList<>();
-    private Position position = new Position(Color.WHITE);
     private Color[] colors = {Color.blue, Color.RED, Color.YELLOW, Color.GREEN};
 
     public Board() {
