@@ -14,14 +14,16 @@ public class GamePiece {
         this.color = color;
     }
 
-    public void move(int step){
+    public int move(int step){
         position = position + step;
+        return position; //if(position>40) {remove GamePiece)}
+    }
+
+    public void resetPosition(){
+        position = 0;
     }
 
     public Color getColor(){
         return color;
     }
-
-
-
 }
