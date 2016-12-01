@@ -88,5 +88,4 @@ public class Board extends JPanel {
         addHome(new Home(Color.GREEN), crossWidth + homeWidth + 1, 7);
 
     }
-
 }

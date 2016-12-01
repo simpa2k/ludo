@@ -14,7 +14,8 @@ public class Player {
     private Color color;
     GamePiece[] gamePieceArray = new GamePiece[4];
 
-    public Player() {
+    public Player(Color color) {
+        this.color = color;
         for (int i = 0; i < gamePieceArray.length; i++) {
             gamePieceArray[i] = new GamePiece(color);
         }

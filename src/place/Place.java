@@ -33,7 +33,4 @@ public abstract class Place extends JComponent {
     }
 
     public abstract void setGamePiece();
-
-
-
 }
