@@ -12,13 +12,33 @@ import java.util.Arrays;
 public class Player {
 
     private Color color;
-    GamePiece[] gamePieceArray = new GamePiece[4];
+    private GamePiece[] gamePieceArray = new GamePiece[4];
 
     public Player(Color color) {
         this.color = color;
         for (int i = 0; i < gamePieceArray.length; i++) {
             gamePieceArray[i] = new GamePiece(color);
         }
+    }
+
+    public String toString(){
+
+        if(color == Color.blue){
+            return String.format("Blue");
+        }else if(color == Color.red){
+            return String.format("Red");
+        }else if(color == Color.green){
+            return String.format("Green");
+        }
+        else if(color == Color.yellow){
+            return String.format("Yellow");
+        }
+        return null;
+
+    }
+
+    public Color getColor(){
+        return color;
     }
 
   /*  public void move(int positionGamePiece){

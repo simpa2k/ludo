@@ -1,6 +1,7 @@
 package window;
 
-import CreateTeam.CreateTeam;
+import createTeam.CreateTeam;
+import player.Player;
 import board.Board;
 import javax.swing.*;
 import java.awt.*;
@@ -11,6 +12,7 @@ public class Window extends JFrame {
 
     private JPanel gamePlan = new Board();
     private JPanel createTeam = new CreateTeam();
+    private Player[] players = null;
 
     public Window() {
 
@@ -20,6 +22,8 @@ public class Window extends JFrame {
                 JOptionPane.OK_CANCEL_OPTION);
         if(newTeams == JOptionPane.CANCEL_OPTION){
             System.exit(0);
+        }else{
+            players = createTeam.addPlayers();
         }
 
         add(gamePlan, BorderLayout.CENTER);
